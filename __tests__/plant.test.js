@@ -15,6 +15,6 @@ describe('Plant', () => {
 
   test('should correctly output the level stat', () => {
     const newState = stateControlA(levelUp);
-    expect(newState.level).toEqual();
+    expect(newState.level).toEqual(1);
   })
 })

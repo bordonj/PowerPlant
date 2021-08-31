@@ -1,6 +1,6 @@
 // This function stores our state.
 
-export { storeState, blueFood, stateControlA, dehydrate }
+export { storeState, blueFood, stateControlA, dehydrate, levelUp }
 
 const storeState = () => {
   let currentState = {};
@@ -40,9 +40,15 @@ const resetState = (prop) => {
 const feed = changeState("soil")(1);
 const blueFood = changeState("soil")(5);
 const yuckyFood = changeState("soil")(-5);
+const levelUpFood = changeState("soil")(10);
 
 const hydrate = changeState("water")(1);
 const superWater = changeState("water")(5);
+const levelUpWater = changeState("water")(10);
+
+const levelUp = changeState("level")(1);
 
 const dehydrate = resetState("water")();
+
+
 
