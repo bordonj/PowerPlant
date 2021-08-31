@@ -44,5 +44,5 @@ const yuckyFood = changeState("soil")(-5);
 const hydrate = changeState("water")(1);
 const superWater = changeState("water")(5);
 
-const dehydrate = resetState("water")()
+const dehydrate = resetState("water")();
 
