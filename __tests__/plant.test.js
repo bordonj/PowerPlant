@@ -1,4 +1,4 @@
-import { storeState, blueFood, stateControlA, dehydrate } from './../src/js/plant.js';
+import { storeState, blueFood, stateControlA, dehydrate, levelUp } from './../src/js/plant.js';
 
 
 describe('Plant', () => {
@@ -13,4 +13,8 @@ describe('Plant', () => {
     expect(initialState.water).toEqual(0);
   })
 
+  test('should correctly output the level stat', () => {
+    const newState = stateControlA(levelUp);
+    expect(newState.level).toEqual();
+  })
 })
