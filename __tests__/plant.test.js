@@ -6,7 +6,7 @@ describe('Plant', () => {
   test('should correctly output the soil stat', () => {
     const stateControlA = storeState();
     const newState = stateControlA(blueFood);
-    expect(newState.soil).toEqual();
+    expect(newState.soil).toEqual(5);
   })
 
 })
