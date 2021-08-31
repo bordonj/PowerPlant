@@ -36,6 +36,16 @@ $(document).ready(function () {
     $('#water-value-a').text(`Water: ${newState.water}`);
   });
 
+  $('#levelUpA').click(function () {
+    const newState = stateControlA(levelUp);
+    $('#level-value-a').text(`Level: ${newState.level}`)
+    if (newState.level % 10 === 0) {
+      const newLevelUpFood = stateControlA(levelUpFood);$('#soil-value-a').text(`Soil: ${newLevelUpFood.soil}`);
+      const newLevelUpWater = stateControlA(levelUpWater);
+      $('#water-value-a').text(`Water: ${newLevelUpWater.water}`);
+    }
+  });
+
   // #2 Plant
   $('#feedB').click(function () {
     const newState = stateControlB(blueFood);
@@ -64,5 +74,5 @@ $(document).ready(function () {
 
 });
 
-// pokemon/neopets? level up.. evolve.. attack.. dehydrate.. harvest..
+// pokemon/neopets? evolve.. attack.. harvest..
 // testing..
