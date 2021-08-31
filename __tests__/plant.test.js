@@ -10,7 +10,7 @@ describe('Plant', () => {
 
   test('should reset the water stat to zero', () => {
     const initialState = stateControlA(dehydrate);
-    expect(initialState.water).toEqual();
+    expect(initialState.water).toEqual(0);
   })
 
 })
