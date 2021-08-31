@@ -9,7 +9,8 @@ const storeState = () => {
   }
 }
 
-const stateControl = storeState();
+const stateControlA = storeState();
+const stateControlB = storeState();
 
 // This is a function factory. We can easily create more specific functions that alter a plant's soil, water, and light to varying degrees.
 
@@ -36,7 +37,7 @@ $(document).ready(function () {
   // This function has side effects because we are using jQuery. Manipulating the DOM will always be a side effect. Note that we only use one of our functions to alter soil. You can easily add more.
 
   $('#feedA').click(function () {
-    const newState = stateControl(blueFood);
+    const newState = stateControlA(blueFood);
     $('#soil-value-a').text(`Soil: ${newState.soil}`);
   });
 
@@ -44,31 +45,51 @@ $(document).ready(function () {
 
   $('#show-stateA').click(function () {
     // We just need to call stateControl() without arguments to see our current state.
-    const currentState = stateControl();
+    const currentState = stateControlA();
     $('#soil-value-a').text(`Soil: ${currentState.soil}`);
   });
 
   $('#negativeA').click(function () {
-    const newState = stateControl(yuckyFood);
-    $('#soil-value-a').text(`Soil: ${newState.soil}`);
+    const newState = stateControlA(hydrate);
+    $('#water-value-a').text(`Soil: ${newState.water}`);
   });
 
+  $('#waterA').click(function () {
+    const newState = stateControlA(hydrate);
+    $('#water-value-a').text(`Water: ${newState.water}`);
+  });
+
+  $('#superWaterA').click(function () {
+    const newState = stateControlA(superWater);
+    $('#water-value-a').text(`Water: ${newState.water}`);
+  });
 
   // #2 Plant
   $('#feedB').click(function () {
-    const newState = stateControl(blueFood);
+    const newState = stateControlB(blueFood);
     $('#soil-value-b').text(`Soil: ${newState.soil}`);
   });
 
   $('#show-stateB').click(function () {
-    const currentState = stateControl();
+    const currentState = stateControlB();
     $('#soil-value-b').text(`Soil: ${currentState.soil}`);
   });
 
   $('#negativeB').click(function () {
-    const newState = stateControl(yuckyFood);
+    const newState = stateControlB(yuckyFood);
     $('#soil-value-b').text(`Soil: ${newState.soil}`);
   });
 
+  $('#waterB').click(function () {
+    const newState = stateControlB(hydrate);
+    $('#water-value-b').text(`Water: ${newState.water}`);
+  });
+
+  $('#superWaterB').click(function () {
+    const newState = stateControlB(superWater);
+    $('#water-value-b').text(`Water: ${newState.water}`);
+  });
 
 });
+
+// pokemon/neopets? level up.. evolve.. attack.. dehydrate.. harvest..
