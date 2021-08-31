@@ -69,8 +69,8 @@ $(document).ready(function () {
   });
 
   $('#negativeA').click(function () {
-    const newState = stateControlA(hydrate);
-    $('#water-value-a').text(`Water: ${newState.water}`);
+    const newState = stateControlA(yuckyFood);
+    $('#water-value-a').text(`Soil: ${newState.soil}`);
   });
 
   $('#waterA').click(function () {
